@@ -37,3 +37,16 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     });
 
 });
+let captchaResult;
+
+function generateCaptcha() {
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
+
+    captchaResult = num1 + num2;
+
+    document.getElementById("captcha-question").textContent =
+        `What is ${num1} + ${num2}?`;
+}
+
+generateCaptcha();
