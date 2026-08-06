@@ -1,17 +1,23 @@
-const form = document.querySelector("form");
+emailjs.init({
+    publicKey: "MROrvTA37H5FqsSx5"
+});
 
-form.addEventListener("submit", function(event) {
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+
     event.preventDefault();
 
-    const email = document.querySelector('input[type="email"]').value;
-    const subject = document.querySelector('input[name="subject"]').value;
-    const message = document.querySelector("textarea").value;
+    emailjs.sendForm(
+        "service_gzyu2c6",
+        "template_0zgysge",
+        this
+    )
+    .then(function() {
+        alert("Message sent successfully! ✅");
+        document.getElementById("contact-form").reset();
+    })
+    .catch(function(error) {
+        alert("Failed to send message ❌");
+        console.log(error);
+    });
 
-    console.log("Email:", email);
-    console.log("Subject:", subject);
-    console.log("Message:", message);
-
-    alert("Message received successfully!");
-
-    form.reset();
 });
