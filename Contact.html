@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="contact.css">
 <link rel="stylesheet" href="style-contact.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
   <header>
@@ -21,6 +22,7 @@
       <a href="Education.html">Education</a>
       <a href="Experience.html">Experience</a>
       <a href="Contact.html" class="active">Contact</a>
+      
     </nav>
   </header>
 
@@ -30,11 +32,18 @@
       <input type="email" name="email" placeholder="Email Address" required>
       <input type="text" name="subject" placeholder="Subject" required>
       <textarea name="message" placeholder="Your Message" required></textarea>
+        <div class="cf-turnstile"
+         data-sitekey="0x4AAAAAAEIXA1c6CKJE0ZQP">
+    </div>
+      
       <button type="submit">Send Message</button>
     </form>
   </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<script src="script.js"></script>
 </body>
 </html>
