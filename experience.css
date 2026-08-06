@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    font-size: 50%;
+}
+
+body{
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+/* Header / Nav (same as home page) */
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+nav a:hover,
+nav a.active{
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+/* Experience section */
+section{
+    min-height: 100vh;
+    padding: 9% 9%;
+}
+
+.experience{
+    background-color: black;
+    padding-top: 14rem;
+}
+
+.section-title{
+    display: inline-block;
+    font-size: 2.4rem;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    border-bottom: 2px solid #b74b4b;
+    padding-bottom: 1rem;
+    margin-bottom: 5rem;
+}
+
+.entry{
+    margin-bottom: 4.5rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.entry:last-child{
+    border-bottom: none;
+}
+
+.entry-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.entry-header h2{
+    font-size: 2.4rem;
+    color: white;
+    font-weight: 600;
+}
+.entry-header .dates{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #b74b4b;
+    white-space: nowrap;
+}
+
+.entry-sub{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin: 0.8rem 0 1.5rem;
+    gap: 1rem;
+}
+.entry-sub .company{
+    font-size: 1.8rem;
+    color: #ddd;
+    font-style: italic;
+}
+.entry-sub .location{
+    font-size: 1.6rem;
+    color: #888;
+    font-style: italic;
+}
+
+.entry ul{
+    margin-left: 2.2rem;
+}
+.entry li{
+    font-size: 1.6rem;
+    color: #bbb;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+    header{
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem 5%;
+    }
+    nav a{
+        margin: 0 1.5rem;
+    }
+    .experience{
+        padding: 20rem 5% 9%;
+    }
+    .entry-header, .entry-sub{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+.company {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.company img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+---------deca ----
+.company {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.company img {
+    width: 38px;
+    height: 28px;
+    object-fit: contain;
+}
+----culti
+.company {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.company img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
