@@ -11,13 +11,14 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         "template_0zgysge",
         this
     )
-    .then(function() {
+    .then(function(response) {
+        console.log("SUCCESS:", response);
         alert("Message sent successfully! ✅");
         document.getElementById("contact-form").reset();
     })
     .catch(function(error) {
-        alert("Failed to send message ❌");
-        console.log(error);
+        console.error("EmailJS ERROR:", error);
+        alert("Error: " + error.text);
     });
 
 });
